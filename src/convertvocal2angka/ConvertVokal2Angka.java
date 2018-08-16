@@ -15,8 +15,24 @@ public class ConvertVokal2Angka {
         String identitas = "Alya Selvia Tamzila / X RL 2 / 03";
         
         tampilJudul(identitas); 
-        
-        
-        
+        String kalimat = tampilInput();
+        String convert = vokal2Angka(kalimat);
+        tamplPerKata(kalimat, convert);
+        tampilHasil(convert);  
     }
+     
+     
+     private static String tampilInput()
+    {
+        Scanner scanner = new Scanner (System.in);
+        
+        System.out.println("Masukkan Kalimat: ");
+        String kalimat = scanner.nextLine();
+        System.out.println("Kalimat Asli: " + kalimat);
+        
+        return kalimat; 
+    }
+     
+     
+     
 }
